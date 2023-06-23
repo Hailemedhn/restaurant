@@ -41,7 +41,7 @@ p{
     max-width: 40%;
     height:auto;
 }
-.item4{
+.item44{
     grid-column-start: 4;
     grid-column-end: 5;
     display: flex;
@@ -49,6 +49,6 @@ p{
     align-items: flex-end;
 }  
 .cart{
-    max-width: 50%;
+    width: 50%;
     height: auto;
 }  

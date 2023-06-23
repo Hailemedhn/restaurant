@@ -22,7 +22,7 @@ class Header extends Component{
                 <div className="item3">
                     <img className="logo" src={logo} alt="logo" />
                 </div>
-                <div className="item4">
+                <div className="item44">
                     <img className="cart" src={cart} alt="cart" />
                 </div>
             </div>
