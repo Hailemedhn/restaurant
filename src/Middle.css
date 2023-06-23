@@ -1,0 +1,25 @@
+ @media  screen and (min-width:600px) {
+    
+    .containerm{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .pizza{
+        height: auto;
+        width: 100%;
+    }
+}
+@media  screen and (max-width:599px) {
+    .containerm{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .pizza{
+        height: 100%;
+        width: auto;
+    }
+}
