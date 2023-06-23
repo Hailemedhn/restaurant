@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./Header.css";
 import manny from "./images/manny.png.png";
-import logo from "./images/logo.png";
+import logo from "./images/logo.jpg";
 import cart from "./images/cart.png";
 
 class Header extends Component{
