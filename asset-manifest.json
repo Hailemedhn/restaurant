@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/restaurant/static/css/main.f67ab41e.css",
-    "main.js": "/restaurant/static/js/main.27f516d3.js",
+    "main.css": "/restaurant/static/css/main.867c1539.css",
+    "main.js": "/restaurant/static/js/main.645ae383.js",
     "static/media/pizza.jpg": "/restaurant/static/media/pizza.1ad0903478062ea803aa.jpg",
     "static/media/logo.jpg": "/restaurant/static/media/logo.c9335b785f2ead62a9fc.jpg",
     "index.html": "/restaurant/index.html",
-    "main.f67ab41e.css.map": "/restaurant/static/css/main.f67ab41e.css.map",
-    "main.27f516d3.js.map": "/restaurant/static/js/main.27f516d3.js.map"
+    "main.867c1539.css.map": "/restaurant/static/css/main.867c1539.css.map",
+    "main.645ae383.js.map": "/restaurant/static/js/main.645ae383.js.map"
   },
   "entrypoints": [
-    "static/css/main.f67ab41e.css",
-    "static/js/main.27f516d3.js"
+    "static/css/main.867c1539.css",
+    "static/js/main.645ae383.js"
   ]
 }
