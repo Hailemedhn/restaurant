@@ -7,7 +7,7 @@ class Footer extends Component{
         return(
             <div className="containerf">
                 <form className="item5">
-                    <input type ="text" className="postalCode" placeholder="Code postal" />
+                    <input type ="number" className="postalCode" placeholder="Code postal" />
                     <span className="inconnu">Code postal inconnu ?</span>
                     <div className="buttonContainer">
                         <button className="livrer">Livrer</button>

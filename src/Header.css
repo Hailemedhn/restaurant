@@ -1,6 +1,6 @@
 .containerh{
     display: grid;
-    grid-template-columns: 15% 15% 60% 10%;
+    grid-template-columns: 15% 15% 50% 20%;
 }
 .item1{
     grid-column-start: 1;
