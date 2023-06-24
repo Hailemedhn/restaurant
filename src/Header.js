@@ -17,10 +17,10 @@ class Header extends Component{
         return(
             <div className="containerh">
                 <div className="item1" id="barsContainer" onClick={this.props.handleClick}>
-                    <FontAwesomeIcon icon={faBars} id="bars" size="3x" />
+                    <FontAwesomeIcon icon={faBars} id="bars" size="4x" />
                 </div>
                 <div className="item2">
-                    <FontAwesomeIcon icon={faUser}  size="3x"/>
+                    <FontAwesomeIcon icon={faUser} id="user" size="3x"/>
                 </div>
                 <div className="item3">
                     <img className="logo" src={logo} alt="logo" />

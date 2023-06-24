@@ -1,24 +1,127 @@
 
 @keyframes sideSlide {
-    from {left: -30%;}
-    to {left:0px}
+    from {left: -20%;}
+    to {left:0px;}    
+}
+@keyframes sideSlideR {
+    from {left: 0%;}
+    to {left:-20%;}    
+}
+
+
+@media screen and (min-width:650px) {
+   .sides{
+        position: absolute;
+        top:20%;
+        background-color: gray;
+        height: 80%;
+        width: 20%;
+        display: grid;
+        text-align: right;
+        padding:10px;
+        grid-template-rows: 17% 17% 17% 17% 17% 16%;
+        animation-name: sideSlide;
+        animation-duration: 1s;
+    }
+
     
+    .hidden{
+        display: none;
+    }
+
+    .hidden2{
+        position: absolute;
+        left:-20%;
+        top:20%;
+        background-color: gray;
+        height: 80%;
+        width: 20%;
+        display: grid;
+        text-align: right;
+        padding:10px;
+        grid-template-rows: 17% 17% 17% 17% 17% 16%;
+        animation-name: sideSlideR;
+        animation-duration: 1s;
+    }
 }
-.sides{
-    position: absolute;
-    top:20%;
-    background-color: gray;
-    height: 80%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items:flex-end;
-    animation-name: sideSlide;
-    animation-duration: 1s;
+@keyframes sideSlideS {
+    from {left: -40%;}
+    to {left:0px;}    
 }
-.side span{
-    padding: 10px;
+@keyframes sideSlideRS {
+    from {left: 0%;}
+    to {left:-40%;}    
+}
+@media screen and (max-width:649px) {
+    .sides{
+         position: absolute;
+         top:20%;
+         background-color: gray;
+         height: 80%;
+         width: 40%;
+         display: grid;
+         text-align: right;
+         padding:10px;
+         grid-template-rows: 17% 17% 17% 17% 17% 16%;
+         animation-name: sideSlideS;
+         animation-duration: 1s;
+     }
+ 
+     
+     .hidden{
+         display: none;
+     }
+ 
+     .hidden2{
+         position: absolute;
+         left:-40%;
+         top:20%;
+         background-color: gray;
+         height: 80%;
+         width: 40%;
+         display: grid;
+         text-align: right;
+         padding:10px;
+         grid-template-rows: 17% 17% 17% 17% 17% 16%;
+         animation-name: sideSlideRS;
+         animation-duration: 1s;
+     }
+ }
+ 
+.span1{
+    cursor: pointer;
+    grid-row-start: 2;
+    grid-row-end: 3;
     color: white;
     font-size: xx-large;
+}
+.span2{
+    cursor: pointer;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    color: white;
+    font-size: xx-large;
+}
+ .span3{
+    cursor: pointer;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    color: white;
+    font-size: xx-large;
+}
+ .span4{
+    cursor: pointer;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    color: white;
+    font-size: xx-large;
+}
+span{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+span:hover{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }

@@ -7,15 +7,18 @@ import Side from "./Side.js";
 import "./Side.css";
 
 
-const sideBar = document.getElementById("side");
 document.body.onclick=(e) => {
-  if(e.target.id !== "bars"){
-     sideBar.className = (sideBar.className === "side" )? "hidden" : "hidden"; }
+    const sideBar = document.getElementById("side");   
+  if(e.target.id === "bars"){  
+     sideBar.className = (sideBar.className === "hidden" || sideBar.className === "hidden2")  ? "sides" : "hidden2";
+  }else if(sideBar.className === "sides"){
+    sideBar.className = "hidden2"; 
   }
+}
 
 function App() {
-  const showSide = () => {
-    sideBar.className = (sideBar.className === "side" )? "hidden" : "side"; 
+  const showSide = (event) => {
+    // 
   }
   return (
     <div className="App">
@@ -28,7 +31,7 @@ function App() {
       <div className='footer'>
         <Footer />
       </div>
-      <div className='hidden' id='side'>
+      <div className='sideBarLand'>
         <Side />
       </div>
    
