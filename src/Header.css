@@ -1,6 +1,6 @@
 .containerh{
     display: grid;
-    grid-template-columns: 15% 15% 50% 20%;
+    grid-template-columns: 15% 15% auto 25%;
 }
 .item1{
     grid-column-start: 1;
@@ -38,7 +38,8 @@ p{
     align-items: center;
 }    
 .logo{
-    max-width: 40%;
+    max-width: 70%;
+    min-width: none;
     height:auto;
 }
 .item44{
@@ -46,9 +47,26 @@ p{
     grid-column-end: 5;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-end; 
 }  
 .cart{
     width: 50%;
     height: auto;
-}  
+}
+.total{
+    position: relative;
+    top:-40px;
+    left:0px;
+    width:40px;
+    height:40px;
+    font-family: 'Ysabeau SC', sans-serif;
+    font-size: 2.6rem;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
