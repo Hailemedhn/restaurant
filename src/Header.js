@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import "./Header.css";
-import manny from "./images/manny.png.png";
+
 import logo from "./images/logo.jpg";
-import cart from "./images/cart.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 class Header extends Component{
     state = {
@@ -16,8 +16,8 @@ class Header extends Component{
     render(){
         return(
             <div className="containerh">
-                <div className="item1">
-                    <FontAwesomeIcon icon={faBars}  size="3x" />
+                <div className="item1" id="barsContainer" onClick={this.props.handleClick}>
+                    <FontAwesomeIcon icon={faBars} id="bars" size="3x" />
                 </div>
                 <div className="item2">
                     <FontAwesomeIcon icon={faUser}  size="3x"/>

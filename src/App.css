@@ -50,3 +50,6 @@ div{
   }
     
 }
+.hidden{
+  display: none;
+}
