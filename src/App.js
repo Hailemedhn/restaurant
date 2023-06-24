@@ -12,7 +12,7 @@ function App() {
       <div className="middle">
         <Middle />
       </div>
-      <div >
+      <div className='footer'>
         <Footer />
       </div>
    

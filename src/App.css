@@ -17,3 +17,36 @@ div{
   grid-row-end: 3;
   overflow: hidden;
 }
+@media screen and (min-width: 600px){
+  .footer{
+    position: fixed;
+    height: 50vh;
+    width: 60vw;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@media screen and (max-width: 599px){
+  .footer{
+    position: fixed;
+    height: 50vh;
+    width: 80vw;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@media screen and (max-height:500px) {
+  .footer{
+    position: fixed;
+    height: 70vh;
+    width: 60vw;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+    
+}
