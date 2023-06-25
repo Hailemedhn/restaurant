@@ -1,7 +1,7 @@
 .pizzaContainer{
     cursor: pointer;
     width: 98vw;
-    height:50%;
+    height:60%;
     display: flex;
     align-items: center;
     justify-content: flex-start;

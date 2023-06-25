@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 class Item extends Component {
-   
+
     render(){
         return(
             <div className="itemList">
@@ -16,18 +16,18 @@ class Item extends Component {
                     <p className="name">{this.props.item[0].name}</p>
                     <p className="descriptioin">{this.props.item[0].description}</p>
                     <div className="buttonsContainer">
-                        <button >
+                        <button onClick={this.props.selectSize} id="0H15" >
                             small
                         </button>
-                        <button >
+                        <button onClick={this.props.selectSize} id="0H17" >
                             regular
                         </button>
-                        <button >
+                        <button onClick={this.props.selectSize} id="0H19" >
                             large
                         </button>
 
                     </div>
-                    <div className="textCenter"  onClick={this.props.putInCart} id="17">
+                    <div className="textCenter"  onClick={this.props.putInCart} id={this.props.currentPrice}>
                         <p className="price">{this.props.item[0].price} 
                         <FontAwesomeIcon icon={faCartShopping} /></p>
                     </div>
@@ -43,7 +43,7 @@ class Item extends Component {
                         <button >
                             regular
                         </button>
-                        <button >
+                        <button onClick={this.props.selectSize} id="1">
                             large
                         </button>
 

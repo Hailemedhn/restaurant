@@ -1,8 +1,9 @@
-import React, {Component} from "react";
+import React, {Component, createRef} from "react";
 import "./Middle.css";
 import pizza from "./images/pizza.jpg";
 
 class Middle extends Component{
+  
     render(){
         return(
             <div className="containerm">

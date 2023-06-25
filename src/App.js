@@ -29,23 +29,30 @@ function App() {
         
       ],
  )
-  const [toggle, setToggle] = useState(true);
+  const [dummyProp, setDummyProp] = useState(true);
   const [page, setPage] = useState("home");
   const [inCart, setInCart] = useState(0);
+  const [currentPrice, setCurrentPrice] = useState("17")
   const placeOrder = (event) => {
     event.preventDefault();
-    setToggle(false);
     setPage("order");
   }
   const addToCart = (event)=>{
     console.log(event.currentTarget.id);
     setInCart((parseFloat(inCart) + parseFloat(event.currentTarget.id)).toFixed(2) + " CHF")
   }
+  const selectSize = (event)=>{
+    let tempArray = itemList;
+    tempArray[parseInt(event.target.id)].price = "CHF" + event.target.id.substr(2,2) +".00"; 
+    setItemLIst(tempArray);
+    setCurrentPrice(itemList[0].price.substring(3,5))
+    setDummyProp(!dummyProp)
+  }
   
   return (
     <div  className={"App" + page}>
       <div className="header" >
-        <Header showCart = {toggle} />
+        <Header showCart = {true} />
       </div>
       {page === "home"  && <div className="middle">
         <Middle/>
@@ -66,7 +73,7 @@ function App() {
         <Cart inCartProp = {inCart}/>
       </div>}
       {page === "order" &&  <div className='item'>
-        <Item item={itemList} putInCart={addToCart}/>
+        <Item item={itemList} selectSize={selectSize} putInCart={addToCart} currentPrice={currentPrice}/>
       </div>}
     </div>
   );
