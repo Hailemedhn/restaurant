@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from "./Header";
 import Middle from "./Middle";
 import Footer from "./Footer";
 import Side from "./Side.js";
+import Choice from "./Choice";
+import Deliver from "./Deliver";
+import Cart from "./Cart";
+
 import "./Side.css";
 
 
@@ -15,26 +19,40 @@ document.body.onclick=(e) => {
     sideBar.className = "hidden2"; 
   }
 }
+let footer = document.getElementById("footerContainer");
 
 function App() {
-  const showSide = (event) => {
-    // 
+  const [toggle, setToggle] = useState(true);
+  const [page, setPage] = useState("home");
+  const placeOrder = (event) => {
+    event.preventDefault();
+    setToggle(false);
+    setPage("order");
   }
+  
   return (
-    <div className="App">
+    <div  className={"App" + page}>
       <div className="header" >
-        <Header handleClick={showSide} />
+        <Header showCart = {toggle} />
       </div>
-      <div className="middle">
-        <Middle />
-      </div>
-      <div className='footer'>
-        <Footer />
-      </div>
+      {page === "home"  && <div className="middle">
+        <Middle/>
+      </div>}
+      {page === "home" && <div className='footer' id="footerContainer">
+        <Footer orderFunction={placeOrder} />
+      </div>}
       <div className='sideBarLand'>
         <Side />
       </div>
-   
+      {page === "order" &&  <div className='sideScroll'>
+        <Choice />
+      </div>}     
+      {page === "order" &&  <div className='deliver'>
+         <Deliver />
+      </div>}     
+      {page === "order" &&  <div className='cart'>
+        <Cart />
+      </div>}
     </div>
   );
 }

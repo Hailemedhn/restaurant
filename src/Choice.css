@@ -1,0 +1,18 @@
+.pizzaContainer{
+    cursor: pointer;
+    width: 98vw;
+    height:50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    background-color: rgb(207, 208, 208);
+
+}
+.pizzaContainer p{
+    height:50%;
+    margin: 0;
+    padding-right: 5%;
+    white-space: nowrap ;
+    font-weight: bolder;
+}

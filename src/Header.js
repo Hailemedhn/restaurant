@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./Header.css";
 
-import logo from "./images/logo.jpg";
+import logo from "./images/pizza.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -16,8 +16,8 @@ class Header extends Component{
     render(){
         return(
             <div className="containerh">
-                <div className="item1" id="barsContainer" onClick={this.props.handleClick}>
-                    <FontAwesomeIcon icon={faBars} id="bars" size="4x" />
+                <div className="item1" id="barsContainer" >
+                  <FontAwesomeIcon icon={faBars} id="bars" size="4x" />
                 </div>
                 <div className="item2">
                     <FontAwesomeIcon icon={faUser} id="user" size="3x"/>
@@ -26,8 +26,7 @@ class Header extends Component{
                     <img className="logo" src={logo} alt="logo" />
                 </div>
                 <div className="item44">
-                    <FontAwesomeIcon icon={faShoppingCart}  size="3x"/>
-                    <div className="total">{this.state.totalInCart}</div>
+                    {this.props.showCart && <FontAwesomeIcon icon={faShoppingCart}  size="3x"/>}
                 </div>
             </div>
         )

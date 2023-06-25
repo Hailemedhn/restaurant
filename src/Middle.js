@@ -7,7 +7,8 @@ class Middle extends Component{
         return(
             <div className="containerm">
                 <div className="item4">
-                    <img className="pizza" src={pizza} alt="pizza" /></div>
+                    <img className="pizza" src={pizza} alt="pizza" />
+                </div>
             </div>
         )
     }

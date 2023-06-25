@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "./Footer.css";
 
 class Footer extends Component{
-    
+   
     render(){
         return(
             <div className="containerf">
@@ -15,7 +15,7 @@ class Footer extends Component{
                     </div>
                     
                     <div className="commanderContainer">
-                        <button className="commander">Commander</button>
+                        <button className="commander" onClick={this.props.orderFunction}>Commander</button>
                     </div>
                 </form>
             </div>
