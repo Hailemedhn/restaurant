@@ -16,13 +16,13 @@ class Item extends Component {
                     <p className="name">{this.props.item[0].name}</p>
                     <p className="descriptioin">{this.props.item[0].description}</p>
                     <div className="buttonsContainer">
-                        <button onClick={this.props.selectSize} id="0H15" >
+                        <button className="button" onClick={this.props.selectSize} id="0H15" >
                             small
                         </button>
-                        <button onClick={this.props.selectSize} id="0H17" >
+                        <button className="button" onClick={this.props.selectSize} id="0H17" >
                             regular
                         </button>
-                        <button onClick={this.props.selectSize} id="0H19" >
+                        <button className="button" onClick={this.props.selectSize} id="0H19" >
                             large
                         </button>
 
@@ -37,18 +37,20 @@ class Item extends Component {
                     <p className="name">{this.props.item[1].name}</p>
                     <p className="descriptioin">{this.props.item[1].description}</p>
                     <div className="buttonsContainer">
-                        <button >
+                        <button className="button" onClick={this.props.selectSize} id="1H16" >
                             small
                         </button>
-                        <button >
+                        <button className="button" onClick={this.props.selectSize} id="1H18" >
                             regular
                         </button>
-                        <button onClick={this.props.selectSize} id="1">
+                        <button className="button" onClick={this.props.selectSize} id="1H20">
                             large
                         </button>
 
                     </div>
-                    <p className="price">{this.props.item[1].price} <FontAwesomeIcon icon={faCartShopping} /></p>
+                    <div className="textCenter"  onClick={this.props.putInCart} id={this.props.currentPrice}>
+                        <p className="price">{this.props.item[1].price} <FontAwesomeIcon icon={faCartShopping} /></p>
+                    </div>
                 </div>
                 <div className="dummy"></div>
             </div>

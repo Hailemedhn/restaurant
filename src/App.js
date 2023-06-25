@@ -25,7 +25,7 @@ let footer = document.getElementById("footerContainer");
 function App() {
  const [itemList, setItemLIst] = useState( [
         {name: "Margarita", description: "Tomato sauce, mozzerela, organic oregano", price:"CHF17.00"},
-        {name:"Stromboli", description: "Tomato sauce, mozzerela, organic oregano",  price:"CHF19.00"}
+        {name:"Stromboli", description: "Tomato sauce, mozzerela, organic oregano",  price:"CHF18.00"}
         
       ],
  )
@@ -38,14 +38,18 @@ function App() {
     setPage("order");
   }
   const addToCart = (event)=>{
-    console.log(event.currentTarget.id);
     setInCart((parseFloat(inCart) + parseFloat(event.currentTarget.id)).toFixed(2) + " CHF")
   }
   const selectSize = (event)=>{
+    for(let i=0; i < document.getElementsByClassName("button").length; i++ ){
+    document.getElementsByClassName("button")[i].style.border = "1px solid gray";
+  }
+    event.target.style.border = "2px solid black";
+
     let tempArray = itemList;
     tempArray[parseInt(event.target.id)].price = "CHF" + event.target.id.substr(2,2) +".00"; 
     setItemLIst(tempArray);
-    setCurrentPrice(itemList[0].price.substring(3,5))
+    setCurrentPrice(itemList[parseInt(event.target.id)].price.substring(3,5))
     setDummyProp(!dummyProp)
   }
   
