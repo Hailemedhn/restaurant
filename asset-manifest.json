@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/restaurant/static/css/main.df8271fd.css",
-    "main.js": "/restaurant/static/js/main.a4ba5817.js",
+    "main.css": "/restaurant/static/css/main.bc56fd80.css",
+    "main.js": "/restaurant/static/js/main.13913080.js",
     "static/media/pizza.jpg": "/restaurant/static/media/pizza.1ad0903478062ea803aa.jpg",
+    "static/media/stromboni.jpg": "/restaurant/static/media/stromboni.f6343106beec66ae0648.jpg",
+    "static/media/margarita.jpg": "/restaurant/static/media/margarita.fe203ca6711e7d3c8178.jpg",
     "index.html": "/restaurant/index.html",
-    "main.df8271fd.css.map": "/restaurant/static/css/main.df8271fd.css.map",
-    "main.a4ba5817.js.map": "/restaurant/static/js/main.a4ba5817.js.map"
+    "main.bc56fd80.css.map": "/restaurant/static/css/main.bc56fd80.css.map",
+    "main.13913080.js.map": "/restaurant/static/js/main.13913080.js.map"
   },
   "entrypoints": [
-    "static/css/main.df8271fd.css",
-    "static/js/main.a4ba5817.js"
+    "static/css/main.bc56fd80.css",
+    "static/js/main.13913080.js"
   ]
 }
