@@ -7,6 +7,7 @@ import Side from "./Side.js";
 import Choice from "./Choice";
 import Deliver from "./Deliver";
 import Cart from "./Cart";
+import Item from "./Item";
 
 import "./Side.css";
 
@@ -22,12 +23,23 @@ document.body.onclick=(e) => {
 let footer = document.getElementById("footerContainer");
 
 function App() {
+ const [itemList, setItemLIst] = useState( [
+        {name: "Margarita", description: "Tomato sauce, mozzerela, organic oregano", price:"CHF17.00"},
+        {name:"Stromboli", description: "Tomato sauce, mozzerela, organic oregano",  price:"CHF19.00"}
+        
+      ],
+ )
   const [toggle, setToggle] = useState(true);
   const [page, setPage] = useState("home");
+  const [inCart, setInCart] = useState(0);
   const placeOrder = (event) => {
     event.preventDefault();
     setToggle(false);
     setPage("order");
+  }
+  const addToCart = (event)=>{
+    console.log(event.currentTarget.id);
+    setInCart((parseFloat(inCart) + parseFloat(event.currentTarget.id)).toFixed(2) + " CHF")
   }
   
   return (
@@ -51,7 +63,10 @@ function App() {
          <Deliver />
       </div>}     
       {page === "order" &&  <div className='cart'>
-        <Cart />
+        <Cart inCartProp = {inCart}/>
+      </div>}
+      {page === "order" &&  <div className='item'>
+        <Item item={itemList} putInCart={addToCart}/>
       </div>}
     </div>
   );

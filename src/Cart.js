@@ -11,7 +11,7 @@ class Cart extends Component {
         return(
             <div className="cartContainer">
                 <FontAwesomeIcon icon={faShoppingCart} id="cartIcon" />
-                <p className="totalInCart">{this.state.totalInCart}</p>
+                <p className="totalInCart">{this.props.inCartProp}</p>
                 <button className="cartCommander">Commander</button>
 
             </div>
