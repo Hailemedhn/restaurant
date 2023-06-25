@@ -42,9 +42,11 @@ function App() {
   }
   const selectSize = (event)=>{
     for(let i=0; i < document.getElementsByClassName("button").length; i++ ){
-    document.getElementsByClassName("button")[i].style.border = "1px solid gray";
+      if(event.target.id.charAt(0)=== document.getElementsByClassName("button")[i].id.charAt(0)){
+        document.getElementsByClassName("button")[i].style.border = "1px solid gray";
+    }
   }
-    event.target.style.border = "2px solid black";
+    event.target.style.border  = "2px solid black";
 
     let tempArray = itemList;
     tempArray[parseInt(event.target.id)].price = "CHF" + event.target.id.substr(2,2) +".00"; 

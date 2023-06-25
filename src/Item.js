@@ -19,7 +19,7 @@ class Item extends Component {
                         <button className="button" onClick={this.props.selectSize} id="0H15" >
                             small
                         </button>
-                        <button className="button" onClick={this.props.selectSize} id="0H17" >
+                        <button className="button selected" onClick={this.props.selectSize} id="0H17" >
                             regular
                         </button>
                         <button className="button" onClick={this.props.selectSize} id="0H19" >
@@ -40,7 +40,7 @@ class Item extends Component {
                         <button className="button" onClick={this.props.selectSize} id="1H16" >
                             small
                         </button>
-                        <button className="button" onClick={this.props.selectSize} id="1H18" >
+                        <button className="button selected" onClick={this.props.selectSize} id="1H18" >
                             regular
                         </button>
                         <button className="button" onClick={this.props.selectSize} id="1H20">

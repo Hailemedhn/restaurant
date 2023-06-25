@@ -16,14 +16,11 @@
     font-weight: bolder;
     font-size: 1.6rem;
 }
-.description{
-
-}
 .buttonsContainer{
     display: flex;
     justify-content: center;
 }
-.buttonsContainer button{
+.button{
     height: 4rem;
     width:7rem;
     background-color: white;
@@ -39,4 +36,7 @@
 }
 .textCenter{
     text-align: center;
+}
+.selected{
+    border: 2px solid black;
 }
